@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  const contacts = useSelector(state => state.contacts.contactsList);
+  const contacts = useSelector(state => state.contacts.items);
   const dispatch = useDispatch();
 
   const onInputChange = event => {
