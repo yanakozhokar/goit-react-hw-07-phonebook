@@ -3,8 +3,8 @@ import { deleteContact } from 'redux/contactsSlice';
 import css from './ContactList.module.css';
 
 const ContactList = () => {
-  const contacts = useSelector(state => state.contacts.contacts.items);
-  const filter = useSelector(state => state.contacts.filter);
+  const contacts = useSelector(state => state.contacts.contactsList);
+  const filter = useSelector(state => state.filter.filter);
   const filteredContacts = contacts.filter(contact => {
     return contact.name.toLowerCase().includes(filter);
   });
